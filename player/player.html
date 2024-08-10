@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Player with Video Upload and Subtitles</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="media-player">
+        <div class="header">
+            <h1>Media Player</h1>
+            <button id="dark-mode-toggle"><i class="fas fa-adjust"></i></button>
+        </div>
+        <video id="video-player" controls>
+            <source id="video-source" src="" type="">
+            Your browser does not support the video element.
+        </video>
+        <div class="controls">
+            <button id="play-btn"><i class="fas fa-play"></i></button>
+            <button id="pause-btn"><i class="fas fa-pause"></i></button>
+            <button id="stop-btn"><i class="fas fa-stop"></i></button>
+        </div>
+        <input type="file" id="file-input" accept="video/mp4,video/x-matroska" hidden>
+        <button id="custom-file-button"><i class="fas fa-file-upload"></i></button>
+        <input type="file" id="subtitle-input" accept=".vtt,.srt" hidden>
+        <button id="custom-subtitle-button"><i class="fas fa-closed-captioning"></i></button>
+        <select id="subtitle-select">
+            <option value="none">No Subtitles</option>
+        </select>
+        <div class="subtitle-controls">
+            <label for="subtitle-delay">Subtitle Delay (ms):</label>
+            <input type="number" id="subtitle-delay" value="0" step="100">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

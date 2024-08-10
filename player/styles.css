@@ -1,0 +1,175 @@
+@keyframes button-click {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.media-player {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .media-player {
+    background: #444;
+    color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    font-size: 18px;
+}
+
+button:active {
+    animation: button-click 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#custom-file-button,
+#custom-subtitle-button {
+    margin-top: 10px;
+    background-color: #28a745;
+}
+
+#custom-file-button:active,
+#custom-subtitle-button:active {
+    animation: button-click 0.2s;
+}
+
+#custom-file-button:hover,
+#custom-subtitle-button:hover {
+    background-color: #218838;
+}
+
+body.dark-mode button {
+    background-color: #555;
+    color: #fff;
+}
+
+body.dark-mode button:hover {
+    background-color: #777;
+}
+
+body.dark-mode #custom-file-button,
+body.dark-mode #custom-subtitle-button {
+    background-color: #17a2b8;
+}
+
+body.dark-mode #custom-file-button:hover,
+body.dark-mode #custom-subtitle-button:hover {
+    background-color: #138496;
+}
+
+#subtitle-select {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    min-width: 150px; /* Set a minimum width */
+    transition: background-color 0.3s, color 0.3s;
+    appearance: none;
+}
+
+body.dark-mode #subtitle-select {
+    background-color: #555;
+    color: #fff;
+    border-color: #444;
+}
+
+#subtitle-select:hover {
+    border-color: #007bff;
+}
+
+body.dark-mode #subtitle-select:hover {
+    border-color: #77c0ff;
+}
+
+#subtitle-select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border-color: rgba(81, 203, 238, 1);
+}
+
+body.dark-mode #subtitle-select:focus {
+    box-shadow: 0 0 5px rgba(119, 192, 255, 1);
+    border-color: rgba(119, 192, 255, 1);
+}
+
+.subtitle-controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.subtitle-controls label {
+    font-size: 16px;
+}
+
+.subtitle-controls input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 80px;
+}
